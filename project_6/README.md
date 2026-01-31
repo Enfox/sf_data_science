@@ -2,19 +2,19 @@
 ## <center> Прогнозирование победы команды в онлайн игре Dota 2
 
 ## Оглавление  
-[1. Описание проекта](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md#Описание-проекта)  
-[2. Какой кейс решаем?](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md#Какой-кейс-решаем)  
-[3. Краткая информация о данных](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Краткая-информация-о-данных)  
-[4. Этапы работы над проектом](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Этапы-работы-над-проектом)  
-[5. Результаты](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Результаты)    
-[6. Выводы](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Выводы) 
+[1. Описание проекта](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md#Описание-проекта)  
+[2. Какой кейс решаем?](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md#Какой-кейс-решаем)  
+[3. Краткая информация о данных](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Краткая-информация-о-данных)  
+[4. Этапы работы над проектом](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Этапы-работы-над-проектом)  
+[5. Результаты](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Результаты)    
+[6. Выводы](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Выводы) 
 
 ### Описание проекта    
 В условиях растущей популярности киберспорта и стремительного развития аналитических инструментов возрастает интерес к моделям, способным предсказывать исходы соревновательных матчей. Одной из таких дисциплин является многопользовательская онлайн-игра Dota 2, в которой на исход матча влияет множество факторов: выбор героев, взаимодействие между ними, состав команд и статистика игроков. 
 
 В рамках данной работы ставится задача построения модели машинного обучения, предсказывающей результат матча Dota 2 на основе информации, известной до начала игры. Основными исходными данными являются пики героев, названия команд и историческая статистика, включая игровые роли героев, типы атаки, их скорости и другие характеристики. 
 
-:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Оглавление)
 
 
 ### Какой кейс решаем?    
@@ -26,7 +26,7 @@
 * Датасет включает в себя результаты матчей в ДОТА 2 с января 2024 года по май 2025 года
 
   
-:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Оглавление)
 
 
 ### Этапы работы над проектом  
@@ -44,7 +44,7 @@
 
 7. сделать финальный вывод о выполненном проекте;
    
-:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Оглавление)
 
 
 ### Результаты:  
@@ -53,6 +53,6 @@
 ### Выводы:  
 Указаны в файле проекта;
 
-:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/edit/main/project_6/README.md/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/Enfox/sf_data_science/blob/main/project_6/README.md/README.md#Оглавление)
 
 Если информация по этому проекту покажется вам интересной или полезной, то я буду очень вам благодарен, если отметите репозиторий и профиль ⭐️⭐️⭐️
