@@ -1,0 +1,16 @@
+image_size: 256
+content_size: 512
+batch_size: 8
+epochs: 40
+learning_rate: 0.0001
+weight_decay: 0.0001
+lr_scheduler: cosine
+vgg_layers: ["relu1_1", "relu2_1", "relu3_1", "relu4_1"]
+content_layer: "relu4_1"
+style_weight: 3.0
+content_weight: 1.0
+content_dir: "data/coco_content/val2017"
+style_dir: "data/wikiart_styles"
+num_workers: 4
+checkpoint_dir: "checkpoints"
+save_every: 5

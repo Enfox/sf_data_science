@@ -1,0 +1,100 @@
+{
+  "pytorch": {
+    "device": "cuda",
+    "image_size": 512,
+    "mean_ms": 25.349304997507716,
+    "std_ms": 0.44677709157251183,
+    "min_ms": 24.71309999236837,
+    "max_ms": 26.01200000208337,
+    "fps": 39.4488132948149
+  },
+  "tflite": {
+    "model": "decoder.tflite (float16)",
+    "mean_ms": 827.6396899978863,
+    "std_ms": 92.50541993382815,
+    "fps": 1.2082552493374912
+  },
+  "quality": {
+    "samples": [
+      {
+        "content": "colva_beach_sq",
+        "style": "black_zigzag",
+        "content_cos_sim": 0.8806,
+        "color_style_distance": 0.0542
+      },
+      {
+        "content": "colva_beach_sq",
+        "style": "bricks_sq",
+        "content_cos_sim": 0.8769,
+        "color_style_distance": 0.0193
+      },
+      {
+        "content": "colva_beach_sq",
+        "style": "Camille_Mauclair",
+        "content_cos_sim": 0.9146,
+        "color_style_distance": 0.2515
+      },
+      {
+        "content": "eiffel_tower",
+        "style": "black_zigzag",
+        "content_cos_sim": 0.8735,
+        "color_style_distance": 0.048
+      },
+      {
+        "content": "eiffel_tower",
+        "style": "bricks_sq",
+        "content_cos_sim": 0.8684,
+        "color_style_distance": 0.0179
+      },
+      {
+        "content": "eiffel_tower",
+        "style": "Camille_Mauclair",
+        "content_cos_sim": 0.9065,
+        "color_style_distance": 0.2332
+      },
+      {
+        "content": "golden_gate_sq",
+        "style": "black_zigzag",
+        "content_cos_sim": 0.8733,
+        "color_style_distance": 0.064
+      },
+      {
+        "content": "golden_gate_sq",
+        "style": "bricks_sq",
+        "content_cos_sim": 0.8733,
+        "color_style_distance": 0.0252
+      },
+      {
+        "content": "golden_gate_sq",
+        "style": "Camille_Mauclair",
+        "content_cos_sim": 0.9056,
+        "color_style_distance": 0.2583
+      },
+      {
+        "content": "statue_of_liberty_sq",
+        "style": "black_zigzag",
+        "content_cos_sim": 0.859,
+        "color_style_distance": 0.0625
+      },
+      {
+        "content": "statue_of_liberty_sq",
+        "style": "bricks_sq",
+        "content_cos_sim": 0.8531,
+        "color_style_distance": 0.0289
+      },
+      {
+        "content": "statue_of_liberty_sq",
+        "style": "Camille_Mauclair",
+        "content_cos_sim": 0.8833,
+        "color_style_distance": 0.2414
+      }
+    ],
+    "avg_content_cos_sim": 0.880675
+  },
+  "model_info": {
+    "checkpoint": "decoder_best.pth",
+    "epoch": 38,
+    "loss": 11.463952912139893,
+    "training_config": "40 epochs, style_weight=3.0, batch_size=8, lr=1e-4"
+  }
+}

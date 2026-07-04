@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+data/
+checkpoints/
+checkpoints_run1_20ep/
+*.npy
+!exported_models/style_vectors/*.npy
+
+# Android build
+android_app/app/build/
+android_app/.gradle/
+android_app/local.properties
+android_app/app/.cxx/
+android_app/app/src/main/assets/style_vectors/*.npy
+
+# IDE
+.idea/
+*.iml
+.DS_Store
