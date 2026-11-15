@@ -22,6 +22,8 @@ def draw_pose(frame, pose, color, threshold=2.0):
         return image
     points = pose["points"]
     visible = (pose["point_scores"] > threshold) & np.isfinite(points).all(axis=1)
+    if pose.get("legs_ambiguous", False):
+        visible[13:17] = False
     width = max(2, round(frame.shape[0] / 300))
     for a, b in LIMBS:
         if visible[a] and visible[b]:
@@ -44,9 +46,13 @@ def comparison_frame(reference, execution, ref_poses, my_poses, row, mode, font)
         image.paste(frame, (left + (360-frame.width)//2, 48 + (640-frame.height)//2))
     draw.text((12, 14), f"Референс: {row['reference_time_s']:.3f} с", font=font, fill=BLUE)
     draw.text((372, 14), f"Повторение: {row['input_time_s']:.3f} с", font=font, fill=ORANGE)
-    text = (f"d_cos: {row['cosine_distance']:.5f}  |  L1: {row['weighted_l1_px']:.2f} px"
-            if row["status"] == "ok" else f"Нет оценки: {row['status']}")
-    draw.text((12, 700), text + "  |  меньше — ближе", font=font, fill=(25, 35, 50))
+    if row["status"] == "ok":
+        text = f"d_cos: {row['cosine_distance']:.5f}  |  L1: {row['weighted_l1_px']:.2f} px  |  меньше — ближе"
+    elif row["status"] == "unreliable_legs":
+        text = "Нет оценки: не все точки обеих ног определены надёжно"
+    else:
+        text = "Нет оценки: недостаточно надёжных точек"
+    draw.text((12, 700), text, font=font, fill=(25, 35, 50))
     draw.text((12, 735), MODE_LABELS[mode], font=font, fill=(25, 35, 50))
     draw.text((12, 770), f"Общих точек: {row['common_points']}/17 · Метрики после совмещения",
               font=font, fill=(25, 35, 50))

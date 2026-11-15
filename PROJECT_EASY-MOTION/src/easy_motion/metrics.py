@@ -53,6 +53,10 @@ def compare_pose(reference, execution, point_threshold=2.0, min_points=6):
     if mask.sum() < min_points:
         result["status"] = "insufficient_points"
         return result
+    # Для сравнения удара нужны обе ноги: бедро, колено и голеностоп.
+    if not mask[11:17].all() or reference.get("legs_ambiguous", False) or execution.get("legs_ambiguous", False):
+        result["status"] = "unreliable_legs"
+        return result
     try:
         ref_points, my_points = reference["points"][mask], execution["points"][mask]
         aligned, matrix = align_pose(my_points, ref_points)
@@ -84,6 +88,11 @@ def summarize(records):
         raise ValueError("Нет пригодных пар кадров: проверьте детекции и пороги")
     summary = {"pair_count": len(records), "valid_pairs": len(valid),
                "reflected_pairs": sum(row["affine_determinant"] < 0 for row in valid)}
+    summary["skipped_pairs"] = {}
+    for row in records:
+        if row["status"] != "ok":
+            reason = row["status"]
+            summary["skipped_pairs"][reason] = summary["skipped_pairs"].get(reason, 0) + 1
     for name in ("cosine_distance", "weighted_l1_px", "centered_cosine_distance"):
         values = [row[name] for row in valid]
         summary[name] = {"mean": float(np.mean(values)), "median": float(np.median(values)),

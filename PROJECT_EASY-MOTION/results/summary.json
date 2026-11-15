@@ -20,6 +20,27 @@
   "person_threshold": 0.9,
   "point_threshold": 2.0,
   "minimum_common_points": 6,
+  "required_keypoints": [
+    "left_hip",
+    "right_hip",
+    "left_knee",
+    "right_knee",
+    "left_ankle",
+    "right_ankle"
+  ],
+  "pose_refinement": {
+    "trigger_min_leg_score": 4.0,
+    "angles_deg": [
+      -40,
+      -20,
+      20,
+      40
+    ],
+    "selection": "maximum minimum leg score, excluding merged legs",
+    "overlap_torso_fraction": 0.2,
+    "minimum_leg_segment_ratio": 0.25,
+    "rotation_box_must_fit": true
+  },
   "reference_min_center_x": 0.4,
   "device": "cuda",
   "versions": {
@@ -35,53 +56,61 @@
   },
   "detections": {
     "reference": 179,
-    "execution": 120
+    "execution": 120,
+    "reference_refined": 51,
+    "execution_refined": 6
   },
   "results": {
     "relative": {
       "pair_count": 120,
-      "valid_pairs": 120,
-      "reflected_pairs": 75,
+      "valid_pairs": 79,
+      "reflected_pairs": 58,
+      "skipped_pairs": {
+        "unreliable_legs": 41
+      },
       "cosine_distance": {
-        "mean": 0.001987291439698194,
-        "median": 0.001148335655794308,
-        "min": 2.8909190772363758e-05,
-        "max": 0.010441597126588098
+        "mean": 0.002413047375881423,
+        "median": 0.0011428223710777674,
+        "min": 0.000838475088712265,
+        "max": 0.013119594034958992
       },
       "weighted_l1_px": {
-        "mean": 51.35668532086426,
-        "median": 45.94889798838672,
-        "min": 7.690020039199616,
-        "max": 106.28409408099932
+        "mean": 56.37312159793696,
+        "median": 46.04674675875785,
+        "min": 37.89083493002754,
+        "max": 118.96778580960014
       },
       "centered_cosine_distance": {
-        "mean": 0.06939518889384205,
-        "median": 0.049127834635859735,
-        "min": 0.0011873782240265918,
-        "max": 0.33221060463595387
+        "mean": 0.07786753043428976,
+        "median": 0.04896914589235768,
+        "min": 0.04039946490350654,
+        "max": 0.39413412626005806
       }
     },
     "realtime": {
       "pair_count": 90,
-      "valid_pairs": 90,
+      "valid_pairs": 60,
       "reflected_pairs": 22,
+      "skipped_pairs": {
+        "unreliable_legs": 30
+      },
       "cosine_distance": {
-        "mean": 0.0008606056332324486,
-        "median": 0.0007220074168667878,
-        "min": 2.075484764518798e-05,
-        "max": 0.0065760556711302875
+        "mean": 0.000934093878406761,
+        "median": 0.001074039223035339,
+        "min": 0.00011935462501588834,
+        "max": 0.0036172604038609
       },
       "weighted_l1_px": {
-        "mean": 30.437249602014692,
-        "median": 29.886984524974757,
-        "min": 6.454195329723029,
-        "max": 77.55695448676953
+        "mean": 35.61204180095736,
+        "median": 42.204431188817466,
+        "min": 14.134517439487743,
+        "max": 76.57852031327346
       },
       "centered_cosine_distance": {
-        "mean": 0.02995217334178535,
-        "median": 0.020583787856635727,
-        "min": 0.0008336723640847143,
-        "max": 0.1935385726888763
+        "mean": 0.03299015458381083,
+        "median": 0.037916459253427015,
+        "min": 0.003015709481896889,
+        "max": 0.0896547752000566
       }
     }
   }

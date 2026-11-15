@@ -71,6 +71,11 @@ def run_project(reference_path, input_path, output_dir):
         "person_threshold": 0.9,
         "point_threshold": 2.0,
         "minimum_common_points": 6,
+        "required_keypoints": estimator.names[11:17],
+        "pose_refinement": {"trigger_min_leg_score": 4.0, "angles_deg": [-40, -20, 20, 40],
+                            "selection": "maximum minimum leg score, excluding merged legs",
+                            "overlap_torso_fraction": 0.2, "minimum_leg_segment_ratio": 0.25,
+                            "rotation_box_must_fit": True},
         "reference_min_center_x": 0.4,
         "device": estimator.device,
         "versions": {
@@ -84,6 +89,8 @@ def run_project(reference_path, input_path, output_dir):
         "detections": {
             "reference": sum(p["points"] is not None for p in ref_poses),
             "execution": sum(p["points"] is not None for p in my_poses),
+            "reference_refined": sum(p["rotation_deg"] != 0 for p in ref_poses),
+            "execution_refined": sum(p["rotation_deg"] != 0 for p in my_poses),
         },
         "results": summaries,
     }

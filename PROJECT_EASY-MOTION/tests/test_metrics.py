@@ -36,6 +36,19 @@ class TestMetrics(unittest.TestCase):
         low = {"points": np.ones((17, 2)), "point_scores": np.ones(17)}
         self.assertEqual(compare_pose(low, low)["status"], "insufficient_points")
 
+    def test_missing_ankle_prevents_kick_score(self):
+        points = np.array([[i % 4, i // 4] for i in range(17)], dtype=float)
+        complete = {"points": points, "point_scores": np.full(17, 5.0)}
+        incomplete = {"points": points.copy(), "point_scores": np.full(17, 5.0)}
+        incomplete["point_scores"][15] = 0.0
+        result = compare_pose(complete, incomplete)
+        self.assertEqual(result["common_points"], 16)
+        self.assertEqual(result["status"], "unreliable_legs")
+        self.assertTrue(np.isnan(result["weighted_l1_px"]))
+        self.assertEqual(compare_pose(complete, complete)["status"], "ok")
+        ambiguous = dict(complete, legs_ambiguous=True)
+        self.assertEqual(compare_pose(complete, ambiguous)["status"], "unreliable_legs")
+
 
 if __name__ == "__main__":
     unittest.main()
