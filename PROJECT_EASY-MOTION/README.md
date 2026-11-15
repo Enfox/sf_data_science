@@ -124,7 +124,7 @@ PROJECT_EASY-MOTION/
 │   ├── summary.json
 │   ├── demo.png
 │   └── metrics.png
-├── docs/                         # метод, эксперименты, соответствие заданию
+├── docs/                         # метод и эксперименты
 └── presentation/
     └── Easy_Motion.pptx           # презентация по шаблону Skillfactory
 ```
@@ -205,9 +205,7 @@ GPU не обязателен: программа автоматически в�
 и нужные входные данные. Архив показывает развитие решения и может пригодиться
 на защите. Для запуска основного скрипта проходить ранние спринты не требуется.
 
-## Соответствие заданию
-
-- [Сопоставление с требованиями задания](docs/ASSIGNMENT.md)
+## Источники
 
 Использованные источники: [модель torchvision](https://docs.pytorch.org/vision/0.20/models/generated/torchvision.models.detection.keypointrcnn_resnet50_fpn.html),
 [OpenCV VideoCapture](https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html).
