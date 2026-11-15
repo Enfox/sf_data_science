@@ -1,0 +1,10 @@
+# Проверенный вариант: Python 3.11.
+numpy==2.4.6
+torch==2.5.1
+torchvision==0.20.1
+opencv-python==4.11.0.86
+matplotlib==3.11.1
+Pillow==12.3.0
+ipykernel==7.2.0
+-e .
+# FFmpeg устанавливается отдельно; см. README.md.

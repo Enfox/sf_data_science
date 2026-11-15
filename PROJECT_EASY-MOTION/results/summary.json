@@ -1,0 +1,88 @@
+{
+  "reference": {
+    "file": "reference_video.mp4",
+    "width": 720,
+    "height": 1280,
+    "fps": 60.0,
+    "frames": 180,
+    "duration_s": 3.0
+  },
+  "execution": {
+    "file": "my.mp4",
+    "width": 480,
+    "height": 854,
+    "fps": 30.0,
+    "frames": 120,
+    "duration_s": 4.0
+  },
+  "model": "Keypoint R-CNN ResNet-50 FPN",
+  "weights": "COCO_V1",
+  "person_threshold": 0.9,
+  "point_threshold": 2.0,
+  "minimum_common_points": 6,
+  "reference_min_center_x": 0.4,
+  "device": "cuda",
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "2.4.6",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "opencv": "4.11.0"
+  },
+  "input_sha256": {
+    "reference_video.mp4": "bf62ac9047281407a97eb8ecdbedc1005124123d4fe2a6bdf18a6432869efea4",
+    "my.mp4": "e46b234a2ebd601efea663d1c2b08e01091b958961df640a53ff9d5f1bb0fbf4"
+  },
+  "detections": {
+    "reference": 179,
+    "execution": 120
+  },
+  "results": {
+    "relative": {
+      "pair_count": 120,
+      "valid_pairs": 120,
+      "reflected_pairs": 75,
+      "cosine_distance": {
+        "mean": 0.001987291439698194,
+        "median": 0.001148335655794308,
+        "min": 2.8909190772363758e-05,
+        "max": 0.010441597126588098
+      },
+      "weighted_l1_px": {
+        "mean": 51.35668532086426,
+        "median": 45.94889798838672,
+        "min": 7.690020039199616,
+        "max": 106.28409408099932
+      },
+      "centered_cosine_distance": {
+        "mean": 0.06939518889384205,
+        "median": 0.049127834635859735,
+        "min": 0.0011873782240265918,
+        "max": 0.33221060463595387
+      }
+    },
+    "realtime": {
+      "pair_count": 90,
+      "valid_pairs": 90,
+      "reflected_pairs": 22,
+      "cosine_distance": {
+        "mean": 0.0008606056332324486,
+        "median": 0.0007220074168667878,
+        "min": 2.075484764518798e-05,
+        "max": 0.0065760556711302875
+      },
+      "weighted_l1_px": {
+        "mean": 30.437249602014692,
+        "median": 29.886984524974757,
+        "min": 6.454195329723029,
+        "max": 77.55695448676953
+      },
+      "centered_cosine_distance": {
+        "mean": 0.02995217334178535,
+        "median": 0.020583787856635727,
+        "min": 0.0008336723640847143,
+        "max": 0.1935385726888763
+      }
+    }
+  }
+}

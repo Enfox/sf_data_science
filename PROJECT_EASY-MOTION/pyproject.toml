@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy-motion"
+version = "1.0.0"
+description = "Учебный проект: сравнение поз спортсменов на двух видео"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [{name = "Олег Константиныч"}]
+
+[tool.setuptools.packages.find]
+where = ["src"]
