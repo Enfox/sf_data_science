@@ -4,5 +4,6 @@
 *.toml text eol=lf
 *.mp4 binary -filter
 *.png binary -filter
+*.jpg binary -filter
 *.pptx binary
 *.zip binary

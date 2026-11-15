@@ -16,6 +16,7 @@
 | Модуль данных с классом набора данных | `VideoDataset` в `src/easy_motion_data/video.py`, экспорт через `__init__.py` |
 | Модуль нейросети | `PoseEstimator` в `src/easy_motion_models/pose.py`, экспорт через `__init__.py` |
 | Пример в Jupyter | `examples/01_video_comparison.ipynb` |
+| Дополнительные материалы по этапам | Ноутбуки спринтов I–IV и входные данные в `examples/sprints/` |
 | Изображения | `images/` |
 | Основной скрипт | `scripts/main.py` |
 | Вспомогательный сценарий | `scripts/pipeline.py` |
