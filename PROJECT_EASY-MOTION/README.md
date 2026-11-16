@@ -1,8 +1,6 @@
 # Easy Motion — виртуальный коуч
 
-**Автор: Олег Константиныч**
-
-Дипломный проект Skillfactory, специализация Data Science / Computer Vision.
+**Дипломный проект Skillfactory, специализация Data Science / Computer Vision.**
 
 Репозиторий: [Enfox/sf_data_science, папка PROJECT_EASY-MOTION](https://github.com/Enfox/sf_data_science/tree/main/PROJECT_EASY-MOTION).
 
